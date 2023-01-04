@@ -106,7 +106,7 @@ def get_video_ids():
     next_page_token = None
 
     request = youtube.playlistItems().list(
-            part="snippet",
+            part="contentDetails",
             playlistId="UURcgy6GzDeccI7dkbbBna3Q",
             maxResults=50,
             pageToken=next_page_token
@@ -114,3 +114,12 @@ def get_video_ids():
     response = request.execute()
 
     return response
+
+
+request = youtube.videos().list(
+        part="statistics",
+        id="CEg30z7cO-s"
+    )
+response = request.execute()
+
+#https://www.youtube.com/watch?v=LhfCietvDZo
