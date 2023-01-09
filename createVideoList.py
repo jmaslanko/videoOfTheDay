@@ -12,23 +12,9 @@ import os
 # API information
 api_service_name = "youtube"
 api_version = "v3"
-
-
 DEVELOPER_KEY = os.getenv('YOUTUBE')
-
 youtube = googleapiclient.discovery.build(
     api_service_name, api_version, developerKey = DEVELOPER_KEY)
-
-request = youtube.channels().list(
-        part="id",
-        forUsername="StuffMadeHere"
-    )
-# Query execution
-response = request.execute()
-# Print the results
-print(response)
-
-#UURcgy6GzDeccI7dkbbBna3Q
 
 
 def get_channel_info(video_list):
@@ -37,8 +23,6 @@ def get_channel_info(video_list):
     split_string = [i[1] for i in split_string]
     split_string = [re.split(r"/", channel)[0] for channel in split_string]
     return split_string
-
-channels = get_channel_info(videoList)
 
 
 def get_uploads_id(channel):
@@ -60,11 +44,6 @@ def get_uploads_id(channel):
         pass
 
     return response
-
-
-uploads_ids = [get_uploads_id(channel) for channel in channels]
-unique_uploads_ids = []
-[unique_uploads_ids.append(i) for i in uploads_ids if type(i) == str and i not in unique_uploads_ids]
 
 
 def get_channel_ids(channel_list):
@@ -115,11 +94,7 @@ def get_video_ids():
 
     return response
 
-
-request = youtube.videos().list(
-        part="statistics",
-        id="CEg30z7cO-s"
-    )
-response = request.execute()
-
-#https://www.youtube.com/watch?v=LhfCietvDZo
+channels = get_channel_info(videoList)
+uploads_ids = [get_uploads_id(channel) for channel in channels]
+unique_uploads_ids = []
+[unique_uploads_ids.append(i) for i in uploads_ids if type(i) == str and i not in unique_uploads_ids]
