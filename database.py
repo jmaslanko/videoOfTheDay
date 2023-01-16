@@ -52,3 +52,16 @@ def get_video_ids(con):
     
     videos = [i[0] for i in rows]
     return videos
+
+def get_uploads_ids(con):
+    '''Pull all video id's that have been used'''
+
+    with con:
+        sql = '''SELECT UploadID FROM uploads'''
+
+        cur = con.cursor()
+        cur.execute(sql)
+        rows = cur.fetchall()
+    
+    uploads = [i[0] for i in rows]
+    return uploads
