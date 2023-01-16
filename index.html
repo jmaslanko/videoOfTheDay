@@ -1,13 +1,35 @@
 <!doctype html>
 <html>
 <head>
-<title>Our Funky HTML Page</title>
+<style>
+    .header {
+        text-align: center;
+        font-family: -apple-system, Helvetica, arial, sans-serif;
+    }
+    .p {
+        text-align: center;
+        font-family: -apple-system, Helvetica, arial, sans-serif;
+    }
+    .video {
+        text-align: center;
+        transform: translate(0, 40%);
+    }
+</style>
+<title>Video of the day</title>
 <meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
 </head>
 <body>
-Content goes here.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hN3CyODxl-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="header">
+        <h1>
+            Video of the day
+        </h1>
+    </div>
+    <div class="p">
+        <p>A basic site displaying a random YouTube video each day.</p>
+    </div>
+    <div class = "video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hN3CyODxl-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
 
