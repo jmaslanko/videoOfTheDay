@@ -46,4 +46,4 @@ jobs:
           # Stage the file, commit and push
           git add index.html
           git commit -m "new html commit"
-          git push origin master
+          git push origin main
