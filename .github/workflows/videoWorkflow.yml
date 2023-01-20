@@ -42,6 +42,6 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
-          git add index.html
+          git add index.html StemVideo.db
           git commit -m "new html commit"
           git push origin main
