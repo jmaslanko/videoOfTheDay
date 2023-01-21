@@ -4,4 +4,4 @@ This is a project to create a website that shows a video of the day.  The videos
 
 Repository is pretty unorganized, may add folders to clean it up.
 
-Site: https://sweet-puffpuff-764841.netlify.app/
+Site: dailyvideo.io
